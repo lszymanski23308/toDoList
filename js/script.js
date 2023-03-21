@@ -1,13 +1,13 @@
 {
   const tasks = [
     {
-      content: "Zrobić zadanie domowe",
+      content: "test",
       done: false,
     },
     {
-      content: "Wyjdź na spacer z psem",
-      done: true
-    },
+      content: "test",
+      done: true,
+    }
   ];
 
   const render = () => {
@@ -15,13 +15,17 @@
 
     for (const task of tasks) {
       htmlString += `
-      <li>
+      <li
+      ${task.done ? " style = \"text-decoration: line-through\"" : ""}
+      >
       ${task.content}
       </li>
       `;
     }
+
     document.querySelector(".js-tasks").innerHTML = htmlString;
   };
+
 
   const addNewTask = (newTaskContent) => {
     tasks.push({
@@ -52,6 +56,7 @@
 
 
   };
+
 
 
   init();
