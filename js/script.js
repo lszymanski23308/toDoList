@@ -45,28 +45,28 @@
 
     document.querySelector(".js-tasks").innerHTML = htmlString;
 
+    bindEvents = () => {
+      const removeButtons = document.querySelectorAll(".js-remove");
 
-    const removeButtons = document.querySelectorAll(".js-remove");
+      removeButtons.forEach((removeButton, index) => {
+        removeButton.addEventListener("click", () => {
+          removeTask(index)
+        });
 
-    removeButtons.forEach((removeButton, index) => {
-      removeButton.addEventListener("click", () => {
-        removeTask(index)
       });
 
-    });
+      const toggleDoneButtons = document.querySelectorAll(".js-done");
 
-    const toggleDoneButtons = document.querySelectorAll(".js-done");
+      toggleDoneButtons.forEach((toggleDoneButton, index) => {
+        toggleDoneButton.addEventListener("click", () => {
+          toggleTaskDone(index)
+        });
 
-    toggleDoneButtons.forEach((toggleDoneButton, index) => {
-      toggleDoneButton.addEventListener("click", () => {
-        toggleTaskDone(index)
       });
-
-    });
-
+    }
   };
 
- 
+
   const onFormSubmit = (event) => {
     event.preventDefault();
 
