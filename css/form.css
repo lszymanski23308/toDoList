@@ -1,0 +1,9 @@
+.form {
+    background-color: #ffffff;
+}
+
+.button__addTaskButton {
+    color: #ffffff;
+    background-color: rgb(3, 165, 165);
+    border: none;
+}
