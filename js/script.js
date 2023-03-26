@@ -19,7 +19,13 @@
     render();
   }
 
+  const input = document.getElementById("myInput");
+  const button = document.getElementById("myButton");
 
+  button.addEventListener("click", function () {
+    input.focus();
+
+  });
 
   const bindEvents = () => {
     const removeButtons = document.querySelectorAll(".js-remove");
@@ -49,12 +55,14 @@
       <li
       ${task.done ? " style = \"text-decoration: line-through\"" : ""}
       >
-      <button class= "js-done">zrobione?</button>
-      <button class= "js-remove">usuń</button>
+      <button class= "button__done js-done">✅</button>
+      <button class= "button__remove js-remove"></button>
+     
       ${task.content}
       </li>
       `;
     }
+
     document.querySelector(".js-tasks").innerHTML = htmlString;
 
     bindEvents();
