@@ -11,6 +11,7 @@
     <link href="css/container.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,400&display=swap" 
 rel="stylesheet">
@@ -26,16 +27,16 @@ rel="stylesheet">
             <h1>Lista zadań</h1>
     </header>
     <section class="section">
-        <h2 class ="section__header">Dodaj nowe zadanie</h2>
+        <h2 class ="sectionHeader">Dodaj nowe zadanie</h2>
         <form class ="form js-form">
-            <input class ="form__input js-newTask"
+            <input class ="form__input js-newTask" type="text" id="myInput"
             placeholder="Co jest do zrobienia?">
-            <button class ="button__addTaskButton">Dodaj zadanie</button> 
+             <button class ="button button__addTaskButton" id="myButton">Dodaj zadanie</button> 
         </form>
     </section>
-<section class ="section">
+<section class ="section">  
     <div class ="section__list">
-        <h2 class ="section__header">Lista zadań</h2>
+        <h2 class ="sectionHeader">Lista zadań</h2>
         <div class="section__list js-taskList"></div>
         <ul class="list__tasks js-tasks"></ul>
       </section>
