@@ -1,41 +1,62 @@
 .form {
     background-color: #ffffff;
-
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
 }
 
 .form__input {
     padding: 10px;
-    margin: 10px;
+    margin: 15px;
+    margin-right: 15px;
     max-width: 100%;
-    outline: none;
-    width: 80%;
+    border: 1px solid rgb(232, 231, 231);
+    width: 78%;
+    margin-left: 10px;
 }
 
 .button__addTaskButton {
     color: #ffffff;
     background-color: teal;
     border: none;
-    padding: 10px;
+    padding: 10px
     cursor: pointer;
-    width: 120px;
+    width: auto;
     height: 25px;
+    margin-left: 10px;
+}
+
+@media (max-width: 767px) {
+    .button__addTaskButton {
+        width: 100%;
+        !important;
+    }
+}
+
+
+
+button:hover {
+    background-color: rgb(3, 101, 101);
 }
 
 .button__done {
-    border: none;
-    background-color: transparent;
-    padding: 0px;
+    outline: auto;
+    color: #ffffff;
+    width: 20px;
+    height: 30px;
+    background-color: #5cb85c;
     cursor: pointer;
-    font-size: x-large;
+    margin-right: 10px;
 }
 
 .button__remove {
+    background-color: red;
+    color: white;
     border: none;
-    background-color: transparent;
-    padding: 0px;
+    border-radius: 5px;
+    padding: 5px;
     cursor: pointer;
-}
 
-.list__tasks {
-    list-style-type: none;
 }
