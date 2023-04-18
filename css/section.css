@@ -15,9 +15,7 @@
 }
 
 .section__header {
-    margin-left: 40px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgb(232, 231, 231);
+    margin-left: 25px;
 }
 
 .list__tasks {
@@ -29,10 +27,7 @@
     flex-wrap: wrap;
     order: 1;
     flex-direction: column-reverse;
-}
-
-.list__tasks .button__done {
-    /* order: 1; */
+    border-top: 1px solid rgb(232, 231, 231);
 }
 
 .list__tasks .button__remove {
@@ -46,9 +41,16 @@
     margin-bottom: 10px;
     background-color: #f8f8f8;
     padding: 20px;
-    border-radius: 5px;
+    position: relative;
+    box-sizing: border-box;
 }
 
-.list__tasks li:last-child {
-    border-bottom: none;
+.list__tasks li::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-bottom: 1px solid #ddd;
+    bottom: 0;
+    left: 2%;
+    right: 2%;
 }
