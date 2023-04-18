@@ -1,4 +1,5 @@
 {
+
   const tasks = [];
 
   const addNewTask = (newTaskContent) => {
@@ -8,6 +9,9 @@
 
     render();
   }
+
+
+
 
   const removeTask = (taskIndex) => {
     tasks.splice(taskIndex, 1);
@@ -19,8 +23,11 @@
     render();
   }
 
-  const input = document.getElementById("myInput");
-  const button = document.getElementById("myButton");
+
+  const input = document.querySelector(".js-input");
+  input.value = "";
+  const button = document.querySelector(".js-button");
+
 
   button.addEventListener("click", function () {
     input.focus();
@@ -52,15 +59,12 @@
 
     for (const task of tasks) {
       htmlString += `
-      <li
-      ${task.done ? " style = \"text-decoration: line-through\"" : ""}
-      >
-      <button class= "button__done js-done">✅</button>
-      <button class= "button__remove js-remove"></button>
-     
-      ${task.content}
-      </li>
-      `;
+  <li ${task.done ? 'style="text-decoration: line-through"' : ''}>
+     <button class="button__done js-done">${task.done ? '✔' : ''}</button>
+     <button class="button__remove js-remove">${'🗑️'}</button>
+     ${task.content}
+  </li>
+`;
     }
 
     document.querySelector(".js-tasks").innerHTML = htmlString;
@@ -68,10 +72,11 @@
     bindEvents();
   };
 
+
   const onFormSubmit = (event) => {
     event.preventDefault();
 
-    const newTaskContent = document.querySelector(".js-newTask").value.trim();
+    const newTaskContent = document.querySelector(".js-input").value.trim();
 
     if (newTaskContent === "") {
       return;
