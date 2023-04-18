@@ -31,27 +31,28 @@
 @media (max-width: 767px) {
     .button__addTaskButton {
         width: 100%;
-        !important;
+        !important
     }
+}
 
-    button:hover {
-        background-color: rgb(3, 101, 101);
-    }
+button:hover {
+    background-color: rgb(3, 101, 101);
+}
 
-    .button__done {
-        outline: auto;
-        color: #ffffff;
-        width: 35px;
-        height: 35px;
-        background-color: #0f7b0f;
-        cursor: pointer;
-        margin-right: 10px;
-    }
+.button__done {
+    outline: auto;
+    color: #ffffff;
+    width: 35px;
+    height: 35px;
+    background-color: #0f7b0f;
+    cursor: pointer;
+    margin-right: 10px;
+}
 
-    .button__remove {
-        background-color: red;
-        color: #ffffff;
-        border: none;
-        padding: 6px;
-        cursor: pointer;
-    }
+.button__remove {
+    background-color: red;
+    color: #ffffff;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+}
