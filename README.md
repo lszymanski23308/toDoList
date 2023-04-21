@@ -4,7 +4,7 @@
 
 ***[Link to page](lszymanski23308.github.io/toDoList/)***
 
-![animation of my website]
+![animation of my website](https://github.com/lszymanski23308/toDoList/blob/main/images/Animation.gif)
 
 
 ## Description
@@ -12,7 +12,7 @@ My ***To-Do List*** is a simple application that allows users to add daily tasks
 The app is easy to use and straightforward, allowing users to quickly add and manage their tasks.
 
 ## Features
-- Adding tasks: Users can add new tasks to their list by providing a description and due date.
+- Adding tasks: Users can add new tasks to their list by providing a description.
 
 - Marking completed tasks: After completing a task, users can mark it as done to easily recognize which tasks are still outstanding.
 
