@@ -2,7 +2,7 @@
 
 ## Demo
 
-***[Link to page](lszymanski23308.github.io/toDoList/)***
+***[Link to page](https://lszymanski23308.github.io/toDoList/)***
 
 ![animation of my website](https://github.com/lszymanski23308/toDoList/blob/main/images/Animation.gif)
 
