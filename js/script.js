@@ -1,7 +1,6 @@
 {
   const tasks = [];
-  const input = document.querySelector(".js-input"); // Przeniesiona deklaracja zmiennej input
-
+  const input = document.querySelector(".js-input");
   const addNewTask = (newTaskContent) => {
     tasks.push({
       content: newTaskContent,
