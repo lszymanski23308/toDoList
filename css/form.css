@@ -4,6 +4,7 @@
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    text-align: left;
     border-top: 1px solid rgb(232, 231, 231);
     padding: 10px;
     padding-right: 20px;
@@ -12,12 +13,19 @@
 .form__input {
     padding: 10px;
     margin: 10px;
+    height: 25px;
     max-width: 100%;
     border: 1px solid rgb(232, 231, 231);
     width: 80%;
 }
 
-.button__addTaskButton {
+@media (max-width: 767px) {
+    .form__input {
+        width: 100%;
+    }
+}
+
+.form__button {
     color: #ffffff;
     background-color: teal;
     border: none;
@@ -29,13 +37,13 @@
 }
 
 @media (max-width: 767px) {
-    .button__addTaskButton {
+    .form__button {
         width: 100%;
-        !important
+
     }
 }
 
-button:hover {
+.form__button:hover {
     background-color: rgb(3, 101, 101);
 }
 

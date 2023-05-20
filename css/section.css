@@ -20,13 +20,9 @@
 
 .list__tasks {
     display: flex;
-    align-items: stretch;
-    list-style: none;
+    flex-direction: column;
     padding: 0;
     margin: 0;
-    flex-wrap: wrap;
-    order: 1;
-    flex-direction: column-reverse;
     border-top: 1px solid rgb(232, 231, 231);
 }
 
@@ -39,15 +35,14 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
-    background-color: #f8f8f8;
     padding: 20px;
     position: relative;
     box-sizing: border-box;
 }
 
 .list__tasks li::after {
+    flex-grow: 1;
     content: "";
-    display: block;
     position: absolute;
     border-bottom: 1px solid #ddd;
     bottom: 0;
