@@ -1,5 +1,6 @@
 {
   const tasks = [];
+  const input = document.querySelector(".js-input"); // Przeniesiona deklaracja zmiennej input
 
   const addNewTask = (newTaskContent) => {
     tasks.push({
@@ -18,37 +19,36 @@
     tasks[taskIndex].done = !tasks[taskIndex].done;
     render();
   };
-  const input = document.querySelector(".js-input");
 
   const bindEvents = () => {
     const removeButtons = document.querySelectorAll(".js-remove");
 
     removeButtons.forEach((removeButton, index) => {
       removeButton.addEventListener("click", () => {
-        removeTask(index)
+        removeTask(index);
       });
-    })
+    });
 
     const toggleDoneButtons = document.querySelectorAll(".js-done");
 
     toggleDoneButtons.forEach((toggleDoneButton, index) => {
       toggleDoneButton.addEventListener("click", () => {
-        toggleTaskDone(index)
+        toggleTaskDone(index);
       });
     });
   };
+
   const render = () => {
     let htmlString = "";
 
-
     for (const task of tasks) {
       htmlString += `
-
-   <li ${task.done ? 'style="text-decoration: line-through"' : ''}>
-     <button class="button__done js-done">${task.done ? '✔' : ''}</button>
-      <button class="button__remove js-remove">${'🗑️'}</button>
-     <span style="flex-grow: 1;">${task.content}</span>
-  </li>`
+        <li ${task.done ? 'style="text-decoration: line-through"' : ''}>
+          <button class="button__done js-done">${task.done ? '✔' : ''}</button>
+          <button class="button__remove js-remove">${'🗑️'}</button>
+          <span style="flex-grow: 1;">${task.content}</span>
+        </li>
+      `;
     }
 
     document.querySelector(".js-tasks").innerHTML = htmlString;
@@ -59,15 +59,15 @@
   const onFormSubmit = (event) => {
     event.preventDefault();
 
-    const newTaskContent = document.querySelector(".js-input").value.trim();
-
+    const newTaskContent = input.value.trim();
 
     if (newTaskContent === "") {
       return;
     }
 
     addNewTask(newTaskContent);
-  }
+
+  };
 
   const onFocus = () => {
     input.value = "";
@@ -82,10 +82,8 @@
 
     form.addEventListener("submit", onFormSubmit);
 
-    const input = document.querySelector(".js-input");
     input.addEventListener('focus', onFocus);
   };
 
   init();
-};
-
+}
