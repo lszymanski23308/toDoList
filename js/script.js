@@ -7,6 +7,7 @@
     });
 
     render();
+
   };
 
   const removeTask = (taskIndex) => {
@@ -42,10 +43,10 @@
 
     for (const task of tasks) {
       htmlString += `
-        <li ${task.done ? 'style="text-decoration: line-through"' : ''}>
+        <li> 
           <button class="button__done js-done">${task.done ? '✔' : ''}</button>
           <button class="button__remove js-remove">${'🗑️'}</button>
-          <span style="flex-grow: 1;">${task.content}</span>
+          <span style="${task.done ? 'text-decoration: line-through' : ''}; flex-grow: 1;">${task.content}</span>
         </li>
       `;
     }
@@ -57,19 +58,18 @@
 
   const onFormSubmit = (event) => {
     event.preventDefault();
+    const input = document.querySelector(".js-input");
 
     const newTaskContent = input.value.trim();
+    input.focus();
 
     if (newTaskContent === "") {
       return;
     }
+    input.value = "";
 
     addNewTask(newTaskContent);
 
-  };
-
-  const onFocus = () => {
-    input.value = "";
   };
 
   const init = () => {
@@ -81,7 +81,6 @@
 
     form.addEventListener("submit", onFormSubmit);
 
-    input.addEventListener('focus', onFocus);
   };
 
   init();
