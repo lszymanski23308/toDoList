@@ -45,8 +45,8 @@
       htmlString += `
         <li> 
           <button class="button__done js-done">${task.done ? '✔' : ''}</button>
-          <button class="button__remove js-remove">${'🗑️'}</button>
           <span style="${task.done ? 'text-decoration: line-through' : ''}; flex-grow: 1;">${task.content}</span>
+          <button class="button__remove js-remove">${'🗑️'}</button>
         </li>
       `;
     }
