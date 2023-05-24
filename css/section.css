@@ -26,10 +26,6 @@
     border-top: 1px solid rgb(232, 231, 231);
 }
 
-.list__tasks .button__remove {
-    order: 3;
-}
-
 .list__tasks li {
     display: flex;
     align-items: center;
