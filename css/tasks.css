@@ -16,9 +16,16 @@
 .tasks__button {
     border: none;
     color: white;
-    background-color: hsl(120, 61%, 34%);
     width: 30px;
     height: 30px;
     padding: 0;
     cursor: pointer;
+}
+
+.tasks__button--done {
+    background-color: hsl(120, 61%, 34%);
+}
+
+.tasks__button--remove {
+    background-color: red;
 }
