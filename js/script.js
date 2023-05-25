@@ -43,10 +43,10 @@
 
     for (const task of tasks) {
       htmlString += `
-        <li> 
-          <button class="button__done js-done">${task.done ? '✔' : ''}</button>
-          <span style="${task.done ? 'text-decoration: line-through' : ''}; flex-grow: 1;">${task.content}</span>
-          <button class="button__remove js-remove">${'🗑️'}</button>
+        <li class="tasks__item">
+          <button class="tasks__button tasks__button--done js-done">${task.done ? '✔' : ''}</button>
+          <span style="${task.done ? 'text-decoration: line-through' : ''};">${task.content}</span>
+          <button class="tasks__button tasks__button--remove js-remove">${'🗑️'}</button>
         </li>
       `;
     }
@@ -63,13 +63,10 @@
     const newTaskContent = input.value.trim();
     input.focus();
 
-    if (newTaskContent === "") {
-      return;
+    if (newTaskContent !== "") {
+      addNewTask(newTaskContent);
+      input.value = "";
     }
-    input.value = "";
-
-    addNewTask(newTaskContent);
-
   };
 
   const init = () => {
