@@ -1,47 +1,16 @@
 .section {
     background-color: white;
-    border: 1px solid #ddd;
-    margin-bottom: 20px;
-}
-
-.section--tasks {
-    margin-top: 20px;
-}
-
-.section__list {
-    margin-top: 10px;
-    padding: 0;
-    list-style-type: none;
+    margin: 10px 0;
 }
 
 .section__header {
-    margin-left: 25px;
-}
-
-.list__tasks {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-    border-top: 1px solid rgb(232, 231, 231);
-}
-
-.list__tasks li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
+    font-size: 20px;
     padding: 20px;
-    position: relative;
-    box-sizing: border-box;
+    margin: 0;
+    border-bottom: 1px solid #ddd;
 }
 
-.list__tasks li::after {
-    flex-grow: 1;
-    content: "";
-    position: absolute;
-    border-bottom: 1px solid #ddd;
-    bottom: 0;
-    left: 2%;
-    right: 2%;
+.section__body {
+    padding: 20px;
 }
+
