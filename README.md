@@ -26,7 +26,7 @@ The application does not require any additional installation or configuration.
 - JavaScript 
 - CSS
 - HTML
-- Flex
+- Grid
 - BEM convention
 - ES6+
 
